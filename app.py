@@ -5,6 +5,16 @@ from io import BytesIO
 
 st.set_page_config(page_title="Extrato PDF → Excel com Plano de Contas", layout="wide")
 
+ # Hiding humburguer menu
+        hide_st_style = """
+                    <style>
+                    #MainMenu {visibility: hidden;}
+                    footer {visibility: hidden;}
+                    header {visibility: hidden;}
+                    </style>
+                    """
+        st.markdown(hide_st_style, unsafe_allow_html=True)
+
 st.title("Observer - Extrato PDF → Excel com Plano de Contas")
 
 uploaded_file = st.file_uploader("Envie o extrato em PDF", type=["pdf"])
